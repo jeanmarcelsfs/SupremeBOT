@@ -2,14 +2,8 @@ from time import strftime
 import pandas as pd
 import ctypes
 from datetime import date
+import os
 
-def Mbox(title, text, style):
-    return ctypes.windll.user32.MessageBoxW(0, text, title, style)
+print( not os.path.isfile("faturar.xlsx") and 1 < 2) 
 
 
-mes = strftime("%m")
-dia = strftime("%d")
-mesf = mes
-if mes == "03":
-    mesf = mesf + " - Março/" + dia
-print(mesf)   
